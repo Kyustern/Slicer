@@ -1,13 +1,12 @@
-//document.getElementById("player").onload()
+const {Howl, Howler} = require('howler');
 
-eventlistener = Event()
+let start = document.getElementById("start")
+let end = document.getElementById("end")
 
-let wavesurfer = WaveShaper.create({
-    container: "#player"
+let startTime = 
+
+let player = new Howl({
+    src: ['public/hehehe.mp3']
 })
 
-function loadPlayer() {
-    wavesurfer.load("/public/hehehe.mp3");
-}
-
-loadPlayer()
+player.play()
