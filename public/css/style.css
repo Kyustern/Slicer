@@ -1,3 +1,7 @@
 body {
-    background-color: dimgrey
+    background-color: dimgrey;
+}
+
+.slidecontainer {
+    width: 100%;
 }

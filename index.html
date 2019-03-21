@@ -3,8 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" src="/public/css/style.css">
-    <link rel="stylesheet" src="/public/css/materialize.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" src="public/css/style.css">
+    <link rel="stylesheet" src="public/css/materialize.css" media="screen,projection">
 </head>
 
 <body>
@@ -17,19 +18,24 @@
     </nav>
 
     <div id="player">
+
+        <div id="waveform">
+
+        </div>
+
         <div class="slidecontainer">
             <input type="range" min="1" max="100" value="50" class="slider" id="start">
         </div>
 
         <div class="slidecontainer">
-            <input type="range" min="1" max="100" value="50" class="slider" id="end">
+            <input type="range" min="1" max="100" value="100" class="slider" id="end">
         </div>
     </div>
 
-    <h3></h3>
-
-    <script src="/public/js/materialize.js"></script>
-    <script src="/public/js/main.js"></script>
+    <script type="text/javascript" src="public/js/materialize.js"></script>
+    <script type="text/javascript" src="public/js/howler.js"></script>
+    <script src="https://unpkg.com/wavesurfer.js"></script>
+    <script src="public/js/main.js"></script>
 </body>
 
 </html>
