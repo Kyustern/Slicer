@@ -10,7 +10,7 @@ let endTime = end.nodeValue
 
 let wavesurfer = WaveSurfer.create({
   container: "#waveform",
-  waveColor: "orange",
+  waveColor: "orange"
 });
 
 wavesurfer.load('public/sample.mp3')
