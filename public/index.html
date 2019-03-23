@@ -4,38 +4,45 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" src="./css/style.css">
-    <link rel="stylesheet" src="./css/materialize.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/materialize.css">
 </head>
 
 <body>
 
-    <nav>
-        <div class="nav-wrapper">
-            <a href="#" class="brand-logo">Logo</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down"></ul>
+    <div id="wrapper">
+
+        <nav id="nav">
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo">SUCE MA BITE</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down"></ul>
+            </div>
+        </nav>
+
+        <div id="player">
+
+            <div id="waveform"></div>
+
+            <a class="waves-effect waves-light btn-small" id="play"></a>
+            
+            <a class="waves-effect waves-light btn-small" id="pause"></a>
+
+            <div class="slidecontainer">
+                <input type="range" min="1" max="100" value="0" class="slider" id="start">
+            </div>
+
+            <div class="slidecontainer">
+                <input type="range" min="1" max="100" value="100" class="slider" id="end">
+            </div>
         </div>
-    </nav>
 
-    <div id="player">
-
-        <div id="waveform">
-
-        </div>
-
-        <div class="slidecontainer">
-            <input type="range" min="1" max="100" value="50" class="slider" id="start">
-        </div>
-
-        <div class="slidecontainer">
-            <input type="range" min="1" max="100" value="100" class="slider" id="end">
-        </div>
     </div>
 
-    <script type="text/javascript" src="public/js/materialize.js"></script>
-    <script type="text/javascript" src="public/js/howler.js"></script>
-    <script src="https://unpkg.com/wavesurfer.js"></script>
-    <script src="public/js/main.js"></script>
+    <script src="js/materialize.js"></script>
+    <!-- <script type="text/javascript" src="./public/js/howler.js"></script> -->
+    <script src="js/wavesurfer.js"></script>
+    <script src="js/main.js"></script>
+
 </body>
 
 </html>

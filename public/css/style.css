@@ -1,7 +1,16 @@
 body {
-    background-color: dimgrey;
+    background-color: dimgrey ;
+}
+
+#wrapper {
+    width : 50%;    
+    text-align : center;
 }
 
 .slidecontainer {
     width: 100%;
+}
+
+#nav #player {
+    display: inline-block;
 }
