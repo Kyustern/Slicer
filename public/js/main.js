@@ -1,30 +1,44 @@
+let playing = new Boolean(false)
+
 let start = document.getElementById("start")
 let end = document.getElementById("end")
+let ppbutton = document.getElementById("playpause")
+let label = document.getElementById("label")
 
-// let player = new Howl({
-//     src: ['/public/sample.mp3']
-// });
+let startTime = start.nodeValue
+let endTime = end.nodeValues
 
 let wavesurfer = WaveSurfer.create({
   container: "#waveform",
-  waveColor: "orange"
+  waveColor: "orange",
+  progressColor: "dimgrey"
 });
+
+console.log(wavesurfer.getProgressColor())
 
 wavesurfer.load('sample.mp3')
 
 wavesurfer.on('ready', function () {
-  init()
-});
-
-// #### FUNCTIONS ####
+  //init()
+})
 
 function init() {
-
-  wavesurfer.play();
-
-  let startTime = start.nodeValue
-  let endTime = end.nodeValue
-
+  wavesurfer.play()
 }
 
-console.log("main")
+ppbutton.onclick = pp()
+
+function pp() {
+  if (playing == true) {
+    wavesurfer.pause()
+    label.innerHTML = "play_circle_outline"
+    playing = false
+    console.log(playing)
+  }
+  else{
+    wavesurfer.play()
+    label.innerHTML = "pause"
+    playing = true
+    console.log(playing)
+  }
+}
