@@ -1,5 +1,7 @@
 let start = document.getElementById("start")
 let end = document.getElementById("end")
+let startLabel = document.getElementById("startLabel")
+let endLabel = document.getElementById("endLabel")
 let ppbutton = document.getElementById("playpause")
 let label = document.getElementById("label")
 let duration
@@ -17,7 +19,6 @@ wavesurfer.load('sample.mp3')
 
 wavesurfer.on('ready', function () {
   duration = wavesurfer.getDuration();
-  console.log(wavesurfer.getDuration());
   //init()
 })
 
@@ -27,7 +28,12 @@ function init() {
   wavesurfer.play()
 }
 
-function sliderToSeconds() {
+function startInputHandler() {
+  console.log();
+  
+}
+
+function endInputHandler() {
   
 }
 
