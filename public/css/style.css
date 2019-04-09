@@ -2,8 +2,10 @@ body {
     background-color: #555 ;
 }
 
-.slidecontainer {
-    width: 100%;
+.control {
+    display: block;
+    margin-left: 100px;
+    /* margin-right: auto; */
 }
 
 #wrapper {
@@ -29,5 +31,9 @@ body {
 }
 
 #player {
+    width: 100%;
+}
+
+#controls {
     width: 100%;
 }
