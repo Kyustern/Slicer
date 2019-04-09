@@ -2,6 +2,10 @@ body {
     background-color: #555 ;
 }
 
+.slidecontainer {
+    width: 100%;
+}
+
 #wrapper {
     /*position: absolute;*/
     width : 75%;    
@@ -10,10 +14,20 @@ body {
     margin-right: auto
 }
 
-.slidecontainer {
-    width: 100%;
-}
-
 #nav #player {
     display: inline-block;
+}
+
+#start {
+    position: relative;
+}
+
+#end {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+#display {
+    
 }

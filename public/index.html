@@ -53,15 +53,16 @@
                 </div> -->
             </div>
 
-            <p>Slice from : <h3 id="startTime"></h3><h3 id="endTime"></h3></p>
+            <div id="display">Slice from : <h4 id="startTime"></h4> to : <h4 id="endTime"></h4></div>
+
             <a class="waves-effect waves-light btn-small" id="playpause"><i class="medium material-icons" id="label">play_circle_outline</i></a>
 
-            <input type="range" min="0" max="100" value="0" class="slider" id="start" oninput="startInputHandler">
-            <input type="range" min="1" max="100" value="100" class="slider" id="end" oninput="endInputHandler">
+            <div id="sliders">
+                <input type="range" min="0" max="100" value="0" class="slider" id="start" oninput="startInputHandler()">
+                <input type="range" min="1" max="100" value="100" class="slider" id="end" oninput="endInputHandler()">
+            </div>
 
         </div>
-
-        <!-- Loader 8 -->
 
     </div>
 
