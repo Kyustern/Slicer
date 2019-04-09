@@ -6,6 +6,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/materialize.css">
+    <link rel="stylesheet" type="text/css" href="css/nouislider.css">
     <!-- <link rel="stylesheet" type="text/css" href="css/loader.css"> -->
 </head>
 
@@ -57,17 +58,14 @@
 
             <a class="waves-effect waves-light btn-small" id="playpause"><i class="medium material-icons" id="label">play_circle_outline</i></a>
 
-            <div id="sliders">
-                <input type="range" min="0" max="100" value="0" class="slider" id="start" oninput="startInputHandler()">
-                <input type="range" min="1" max="100" value="100" class="slider" id="end" oninput="endInputHandler()">
-            </div>
+            <div id="slider"></div>
 
         </div>
 
     </div>
-
+    <script src="js/wNumb.js"></script>
     <script src="js/materialize.js"></script>
-    <!-- <script type="text/javascript" src="./public/js/howler.js"></script> -->
+    <script src="js/nouislider.js"></script>
     <script src="js/wavesurfer.js"></script>
     <script src="js/main.js"></script>
 

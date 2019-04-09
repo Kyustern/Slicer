@@ -1,13 +1,11 @@
-let start = document.getElementById("start")
-let end = document.getElementById("end")
 let startLabel = document.getElementById("startTime")
 let endLabel = document.getElementById("endTime")
 let ppbutton = document.getElementById("playpause")
 let label = document.getElementById("label")
 let duration
 let playing = new Boolean(false);
-let startSliderValue = start.value
-let endSliderValue = end.value
+// let startSliderValue = start.value
+// let endSliderValue = end.value
 
 let wavesurfer = WaveSurfer.create({
   container: "#waveform",
@@ -19,29 +17,34 @@ wavesurfer.load('sample.mp3')
 
 wavesurfer.on('ready', function () {
   duration = Math.floor(wavesurfer.getDuration())
-  start.max = duration
-  end.max = duration
-
-  console.log(duration)
-  
-  //init()
 })
+
+let slider = document.getElementById('slider');
+noUiSlider.create(slider, {
+ start: [20, 80],
+ connect: true,
+ step: 1,
+ orientation: 'horizontal', // 'horizontal' or 'vertical'
+ range: {
+   'min': 0,
+   'max': duration
+ },
+ format: wNumb({
+   decimals: 0
+ })
+});
 
 ppbutton.onclick = pp;
 
-// function init() {
-//   wavesurfer.play()
+// function startInputHandler() {
+//   startLabel.innerHTML = start.value
+//   end.min = start.value
 // }
 
-function startInputHandler() {
-  startLabel.innerHTML = start.value
-  end.min = start.value
-}
-
-function endInputHandler() {
-  startLabel.innerHTML = start.value
-  start.max = end.value
-}
+// function endInputHandler() {
+//   endLabel.innerHTML = end.value
+//   start.max = end.value
+// }
 
 function pp() {
   if (playing == true) {
